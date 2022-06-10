@@ -19,3 +19,5 @@ Route::controller(AuthController::class)->group(function () {
 Route::post('/addItem',[UserController::class,'addItem'])->name("addItem");
 Route::post('/addCategory',[UserController::class,'addCategory'])->name("addCategory");
 Route::get('/getAllItems',[ItemController::class,'getAllItems'])->name("getAllItems");
+Route::post('/addLike',[ItemController::class,'addLike'])->name("addLike");
+Route::post('/updateLike',[ItemController::class,'updateLike'])->name("updateLike");
