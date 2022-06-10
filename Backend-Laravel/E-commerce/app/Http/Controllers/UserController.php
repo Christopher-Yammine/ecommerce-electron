@@ -22,17 +22,16 @@ class UserController extends Controller
    }
 
    public function addCategory(Request $request){
-    $item=new Item();
-    $item->name=$request->name;
-    $item->description=$request->description;
-    $item->category_id=$request->category_id;
-    $item->admin_id=$request->admin_id;
-    $item->picture=$request->picture;
+    $item=new Category();
+    $item->name=$request->name; 
+    $item->id_admin=$request->id_admin;
     $item->save();
     return response()->json([
         "status"=>"success"
     ],200);
 
+    
 
    }
+   
 }
