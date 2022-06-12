@@ -19,11 +19,17 @@ function login(){
         data:data
     }).then(function(response){
         if(response.data.user["id_usertype"]){
-            window.location.href='../Html/adminpanel.html';
-        } else {
-            
-            
+            window.location.href='../ecom-app-electron/Html/adminpanel.html?id='+response.data.user["id"];
         }
+        else {
+            document.getElementById('msg').innerText="you are not allowed here/username/password incorrect"
+            setTimeout(() => {
+                document.getElementById('msg').innerText=""
+            }, 2000);
+        }
+
+            
+        
     }).catch(function(err){
         document.getElementById('msg').innerText="you are not allowed here/username/password incorrect"
         setTimeout(() => {

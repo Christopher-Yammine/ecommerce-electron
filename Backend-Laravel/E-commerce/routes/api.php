@@ -22,3 +22,4 @@ Route::get('/getAllItems',[ItemController::class,'getAllItems'])->name("getAllIt
 Route::post('/addLike',[ItemController::class,'addLike'])->name("addLike");
 Route::post('/updateLike',[ItemController::class,'updateLike'])->name("updateLike");
 Route::post('/checkLiked',[ItemController::class,'checkLiked'])->name("checkLiked");
+Route::get('/getCategories',[UserController::class,'getAllCategories'])->name("allcategories"); 

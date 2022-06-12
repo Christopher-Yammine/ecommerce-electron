@@ -30,8 +30,17 @@ class UserController extends Controller
         "status"=>"success"
     ],200);
 
+  
     
 
    }
+   public function getAllCategories (){
+        $category=Category::all();
+        return response()->json([
+            "categories"=>$category,
+            "status"=>"success"
+        ],200);
+    }
+
    
 }
