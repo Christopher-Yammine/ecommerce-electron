@@ -35,8 +35,21 @@ class ItemController extends Controller
         ->update(['liked'=>$request->liked]);
 
         return response()->json([
-            "status"=>"succes",
+            "status"=>"success",
         
         ],200);
     }
+
+    public function checkLiked(Request $request){
+        $like=Like::where('id_user',$request->id_user)
+        ->where('id_item',$request->id_item)
+        ->get('likes.liked')->first();
+
+        return response()->json([
+            "status"=>"success",
+            "liked"=>$like["liked"]
+        
+        ],200);
+    } 
+    
 }

@@ -1,0 +1,15 @@
+/Backend-Laravel/E-commerce/node_modules/
+/Backend-Laravel/E-commerce/public/hot
+/Backend-Laravel/E-commerce/public/storage
+/Backend-Laravel/E-commerce/storage/*.key
+/Backend-Laravel/E-commerce/vendor
+/Backend-Laravel/E-commerce.env
+/Backend-Laravel/E-commerce.env.backup
+/Backend-Laravel/E-commerce.phpunit.result.cache
+/Backend-Laravel/E-commerceHomestead.json
+/Backend-Laravel/E-commerceHomestead.yaml
+/Backend-Laravel/E-commercenpm-debug.log
+/Backend-Laravel/E-commerceyarn-error.log
+/Backend-Laravel/E-commerce/.idea
+/Backend-Laravel/E-commerce/.vscode
+ecom-app/node_modules/
