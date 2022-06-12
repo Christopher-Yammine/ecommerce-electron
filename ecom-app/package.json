@@ -1,0 +1,17 @@
+{
+  "name": "ecom-app",
+  "version": "1.0.0",
+  "description": "ecom",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "chris",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "devDependencies": {
+    "electron": "^19.0.4"
+  }
+}
