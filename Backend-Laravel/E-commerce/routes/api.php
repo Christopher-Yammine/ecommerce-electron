@@ -15,11 +15,14 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('refresh', 'refresh');
 
 });
-
+Route::group(['prefix' => 'user'], function(){
+    Route::group(['middleware' => 'role.like'], function(){
+        Route::get('/getAllItems',[ItemController::class,'getAllItems'])->name("getAllItems");
+        Route::post('/addLike',[ItemController::class,'addLike'])->name("addLike");
+        Route::post('/updateLike',[ItemController::class,'updateLike'])->name("updateLike");
+        Route::post('/checkLiked',[ItemController::class,'checkLiked'])->name("checkLiked");
+    });
+});
 Route::post('/addItem',[UserController::class,'addItem'])->name("addItem");
 Route::post('/addCategory',[UserController::class,'addCategory'])->name("addCategory");
-Route::get('/getAllItems',[ItemController::class,'getAllItems'])->name("getAllItems");
-Route::post('/addLike',[ItemController::class,'addLike'])->name("addLike");
-Route::post('/updateLike',[ItemController::class,'updateLike'])->name("updateLike");
-Route::post('/checkLiked',[ItemController::class,'checkLiked'])->name("checkLiked");
 Route::get('/getCategories',[UserController::class,'getAllCategories'])->name("allcategories"); 
