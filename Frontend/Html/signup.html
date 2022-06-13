@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="../Styles/signup.css" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+   <div class="main-container">
+    <div class="add-form">
+        <span class="arrow material-icons" id="back">
+            arrow_back
+            </span>
+        <input type="text" id="fname" placeholder="Enter name">
+        <input type="text" id="lname" placeholder="Enter last name">
+        <input type="text" id="email" placeholder="Enter email">
+        <input type="password" id="password" placeholder="Enter password">
+        <select name="gender" id="gender">
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            <option value="3">Other</option>
+            
+        </select>
+        <button class="btn" id="btn">sign up</button>
+
+
+    </div>
+    <div class="uploadpic">
+       
+        <div>
+             <div>
+            <label for="fileId"></label>
+            </div>
+            <div>
+                 <input type="file" name="photo" id="fileId"
+                    onchange="imageUploaded()">
+            </div>
+                   
+                    <div class="upload" id="upload">
+                       <div id="display">
+                        </div>
+                    </div>   
+       
+          
+        </div>
+      
+    </div>
+</div>
+
+
+    <script src="../Scripts/signup.js"></script>
+</body>
+</html>

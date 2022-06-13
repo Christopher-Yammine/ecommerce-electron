@@ -17,7 +17,9 @@ function login(){
         data:data
     }).then(function(response){
         if(response.data.user){
-            console.log(response);
+            window.localStorage.setItem("token",response.data.authorisation["token"]);
+            window.localStorage.setItem("id",response.data.user["id"]);
+            window.location.href="../Frontend/Html/landingpage.html";
         }
         else {
             document.getElementById('msg').innerText="username/password incorrect"

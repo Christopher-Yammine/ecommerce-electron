@@ -9,7 +9,7 @@ use App\Models\Like;
 class ItemController extends Controller
 {
     public function getAllItems(){
-        $items=Item::join('categories as c','c.id','=','items.id')
+        $items=Item::join('categories as c','c.id','=','items.category_id')
         ->get(['items.*','c.name as catName']);
         return response()->json([
             "response"=>"success",
